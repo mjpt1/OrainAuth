@@ -97,4 +97,5 @@ Contributions are what make the open-source community such an amazing place to l
 4. Push to the Branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
+I would appreciate it if you could add a star to support my project 🙏
 Made with ❤️ by [2yt](https://github.com/2yt-code)
