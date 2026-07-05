@@ -10,7 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from pathlib import Path
+from dotenv import load_dotenv
+import os
 import pymysql
+
+# Loading the .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -83,11 +88,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'orainauth',            
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost', 
-        'PORT': '3306',
+        'NAME': os.getenv('DB_NAME', 'orainauth'),            
+        'USER': os.getenv('DB_USER', 'root'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'localhost'), 
+        'PORT': os.getenv('DB_PORT', '3306'),
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
