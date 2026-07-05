@@ -28,6 +28,7 @@
 ## Prerequisites
 
 - Python 3.9+
+- MySQL Server
 - Git
 
 ## Installation
@@ -57,13 +58,31 @@ Follow these steps to get a local copy up and running:
    pip install -r requirements.txt
 ```
 
-4. **Run Migrations:**
+4. **Creating the .env file:**
+
+The project uses environment variables for sensitive information
+Copy the example environment file:
+```bash
+   cp .env.example .env
+```
+Open the `.env` file and update it with your own database credentials
+
+5. **Database Setup:**
+
+Open your MySQL terminal or a tool like MySQL Workbench
+Create a new database with the following command:
+```sql
+   CREATE DATABASE orainauth;
+```
+Ensure your MySQL user has permissions to access this database
+
+6. **Run Migrations:**
 
 ```python
    python manage.py migrate
 ```
 
-5. **Start the Server:**
+7. **Start the Server:**
 
 ```python
    python manage.py runserver
