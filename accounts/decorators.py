@@ -15,7 +15,7 @@ def redirect_if_authenticated(path: str = 'dashboard'):
         return func(request, *args, **kwargs)
     return wrapper
 
-def redirect_if_not_authenticated(path: str = 'dashboard'):
+def redirect_if_not_authenticated(path: str = 'login'):
     """
     A decorator that checks if the user is not logged in,
     redirects to the page specified in the route.
