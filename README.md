@@ -101,9 +101,9 @@ To access the authentication flow:
 
 ## Screenshots
 
-![Login Page](https://github.com/2yt-code/OrainAuth/blob/main/core/Screenshots/screenshot-1.png)
-![Dashboard Page](https://github.com/2yt-code/OrainAuth/blob/main/core/Screenshots/screenshot-2.png)
-![Home Page](https://github.com/2yt-code/OrainAuth/blob/main/core/Screenshots/screenshot-3.png)
+![Login Page](core/Screenshots/screenshot-1.png)
+![Dashboard Page](core/Screenshots/screenshot-2.png)
+![Home Page](core/Screenshots/screenshot-3.png)
 
 ## Contributing
 
