@@ -23,7 +23,7 @@ def login_page(request):
             return redirect('login')
 
         # Check user for db
-        user = authenticate(username=username, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is None:
             # If username is valid but password does not match
