@@ -1,6 +1,6 @@
+from django.shortcuts import redirect
 from collections.abc import Callable
 from decorator import decorator
-from django.shortcuts import redirect
 
 def redirect_if_authenticated(path: str = 'dashboard'):
     """
@@ -19,7 +19,7 @@ def redirect_if_not_authenticated(path: str = 'login'):
     """
     A decorator that checks if the user is not logged in,
     redirects to the page specified in the route.
-    If the route has no value, it defaults to the dashboard page
+    If the route has no value, it defaults to the `login` page
     """
     @decorator
     def wrapper(func: Callable, request, *args, **kwargs):
