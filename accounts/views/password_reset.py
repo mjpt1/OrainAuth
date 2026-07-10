@@ -5,14 +5,14 @@ from django.contrib.auth.views import (
     PasswordResetConfirmView,
     PasswordResetCompleteView
 )
-from accounts.decorators import redirect_if_authenticated
 
 # Since the Send Reset Password in Email system is for Django itself,
 # that is, it is the default, we have to make it work in our Django custom classes so that if the user is logged into their account,
 # they will go to the dashboard page
 class RedirectDashboard:
-    @redirect_if_authenticated('dashboard')
     def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('dashboard')
         return super().dispatch(request, *args, **kwargs)
 
 # -------------------
