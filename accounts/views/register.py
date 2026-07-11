@@ -48,7 +48,6 @@ def register_page(request):
             cash = 5000
         )
 
-        # New register logging
         return redirect('dashboard')
 
     # registration/register.html template
