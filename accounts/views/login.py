@@ -33,7 +33,6 @@ def login_page(request):
         else:
             # If username and password are correct
             login(request, user)
-            # logging login
             return redirect('dashboard')
 
     # registration/login.html template
