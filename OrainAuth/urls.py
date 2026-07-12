@@ -4,7 +4,7 @@ from dashboard import views
 
 urlpatterns = [
     path('', views.home_page, name='home'),
-    path('admin/', admin.site.urls, name='admin'),
-    path('dashboard', include('dashboard.urls')),
+    path('admin/', admin.site.urls),
+    path('dashboard/', include('dashboard.urls')),
     path('accounts/', include('accounts.urls')),
 ]

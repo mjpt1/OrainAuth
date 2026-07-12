@@ -68,12 +68,13 @@ Copy the example environment file:
    # For linux
    cp .env.example .env
 ```
-Open the `.env` file and update it with your own database credentials
+Open the `.env` file and update `SECRET_KEY`. By default the project uses SQLite (`DB_ENGINE=sqlite`). To use MySQL instead, set `DB_ENGINE=mysql` and fill in the database credentials.
 
 5. **Database Setup:**
 
-Open your MySQL terminal or a tool like MySQL Workbench
-Create a new database with the following command:
+**SQLite (default):** no extra setup needed.
+
+**MySQL:** create a database first:
 ```sql
    CREATE DATABASE orainauth;
 ```
@@ -81,13 +82,13 @@ Ensure your MySQL user has permissions to access this database
 
 6. **Run Migrations:**
 
-```python
+```bash
    python manage.py migrate
 ```
 
 7. **Start the Server:**
 
-```python
+```bash
    python manage.py runserver
 ```
 
